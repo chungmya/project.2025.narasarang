@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+
+ @use "util/varibles" as *;
+ @use "util/function" as *;
+ @use "util/mixins" as *;
+
+//------------------------------------
+// Vendor
+//------------------------------------
+ @use "vendor/colorbox/colorbox" as *;
+
+//------------------------------------
+// Vendor 확장
+//------------------------------------
+ @use "vendor_extension/colorbox/colorbox" as *;
+
+//------------------------------------
+// Base
+//------------------------------------
+ @use "base/magic" as *;
+ @use "base/svg" as *;
+
+
+//------------------------------------
+// module 
+//------------------------------------
+ @use "module/uolList" as *;
+ @use "module/layout" as *;
+ @use "module/btn" as *;
+ @use "module/nav" as *;
+ @use "module/quick" as *;
+// //  @use "module/gnb" as *;
+ @use "module/info" as *;
+ @use "module/table" as *;
+ @use "module/footer_menu" as *;
+ @use "module/popup" as *;
+ @use "module/setting" as *;
+ @use "module/mobile" as *;
+ @use "module/test" as *;
+

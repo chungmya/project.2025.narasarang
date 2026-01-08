@@ -1,0 +1,40 @@
+/* breadcrumbs */
+
+.inner-center {
+	max-width: 132.8rem;
+	margin: 0 auto;
+	padding: 0 1.6rem;
+	@include bp('md') {
+		padding: 0 2.4rem;
+	}
+	.inner-top-box {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.q-breadcrumbs {
+	&.custom-breadcrumbs {
+		padding: 1.2rem 0;
+		.q-breadcrumbs__el {
+			color: var(--primary-50);
+			font-size: 1.5rem;
+			text-decoration: underline;
+			text-underline-offset: 2px;
+			&.icon-home {
+				justify-content: center;
+				width: 2rem;
+				height: 2rem;
+				background: url(../assets/images/common/q-icon-home.svg) no-repeat right/contain;
+				text-align: center;
+			}
+		}
+		.q-breadcrumbs__separator {
+			line-height: 1;
+			@include bp('md') {
+				margin: 0 0.4rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+/* 공공누리 */
+.kogl-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 6.4rem;
+	padding: 2rem;
+	border: 1px solid var(--grey-40);
+	border-radius: 1.2rem;
+	@include bpm('sm') {
+		flex-direction: column;
+		margin-top: 4rem;
+	}
+	.kogl-img {
+		max-width: 20rem;
+	}
+	.tit {
+		margin-left: 4rem;
+		@include bpm('sm') {
+			margin-left: 0;
+			margin-top: 4rem;
+		}
+	}
+}

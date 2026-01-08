@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="ko" class="localstorage">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Cache-Control" content="no-cache; no-store; no-save" />
+		<meta name="viewport" content="width=device-width" />
+		<title></title>
+		<link rel="stylesheet" href="./resources/worklist.min.css" />
+		<script type="text/javascript" src="./resources/worklist.min.js"></script>
+		<script type="text/javascript" src="./resources/worklist.include.js"></script>
+		<style>
+			.btn_report {
+				display: none;
+			}
+		</style>
+		<script>
+			$(document).ready(function () {
+				$('.tobe_section .pc').find('.btn_todo').eq(0).addClass('active');
+
+				//초기 모든 details 의 open 속성 제거
+				$('details').each(function () {
+					$(this).prop('open', false);
+					$('.btn_detail').find('span').text(' ▼');
+				});
+
+				//.btn_detail 클릭 시 모든 details 의 open 속성 toggle
+				$('.btn_detail').on('click', function () {
+					$('details').each(function () {
+						$(this).prop('open', !$(this).prop('open'));
+						if ($(this).prop('open')) {
+							$('.btn_detail').find('span').text(' ▶');
+						} else {
+							$('.btn_detail').find('span').text(' ▼');
+						}
+					});
+					return false;
+				});
+			});
+		</script>
+	</head>
+	<body data-page="todo">
+		<div id="wrap">
+			<h1>나라사랑포털 <small>: BO</small></h1>
+			<!-- header -->
+			<div class="header">
+				<div class="tab_nav">
+					<h2>IA</h2>
+					<ul>
+						<li>
+							<a href="javascript:void(0);"><span>A.INFO</span></a>
+						</li>
+						<li>
+							<a href="javascript:void(0);"><span>View All</span></a>
+						</li>
+					</ul>
+				</div>
+				<div class="info_section">
+					<div class="box info_box">
+						<h2>Info</h2>
+						<div class="box_wrap">
+							<table>
+								<caption>
+									Encoding, Cross Browsing, Log Infomation
+								</caption>
+								<colgroup>
+									<col width="100px" />
+									<col width="100px" />
+									<col width="100px" />
+									<col width="100px" />
+								</colgroup>
+								<tbody>
+									<!-- <tr>
+									<th scope="row">Basic</th>
+									<td colspan=3>
+										<div data-ui="more" data-title="Basic">
+											<dl><dt></dt><dd></dd></dl>
+										</div>
+									</td>
+								</tr> -->
+									<tr>
+										<th scope="row">Log</th>
+										<td colspan="3">
+											<div data-ui="more" data-title="Log">
+												<dl>
+													<dt>05/19</dt>
+													<dd>Hello World~!!</dd>
+												</dl>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="box link_box">
+						<h2>Link</h2>
+						<div class="box_wrap">
+							<script>
+								incLinkInfo();
+							</script>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //header -->
+
+			<!-- content -->
+			<div id="content" class="content">
+				<!-- **************************************************
+* Start of Content
+************************************************** -->
+
+				<!-- --------------------------------------------------
+// [A.Info]
+-------------------------------------------------- -->
+				<div class="tab_contents_wrap">
+					<h3>Pub</h3>
+					<table>
+						<script>
+							incThead();
+						</script>
+						<tbody>
+							<tr>
+								<td class="id">BD004</td>
+								<td class="depth2">가이드 작업</td>
+								<td class="depth3">
+									<details open>
+										<summary>Form 가이드</summary>
+										<pre>
+											- checkbox
+											- radio
+											- inputype
+											- calendar
+											- file upload
+
+											메인 컬러 루트에 정리
+											📍 scss/utils/_variables.scss
+											
+											$text-color: #464c53;
+											$primary-color: #256ef4;
+											$secondary-color: #063a74;
+											$gray-color: #8a949e;
+
+											-> :root {
+												--primary-color: #{$primary-color};
+											}
+										</pre>
+									</details>
+								</td>
+								<td class="path">
+									<a href="../_ui_guide/guide_typo.html" target="_blank">guide_typo.html</a>
+								</td>
+								<td class="request">고재광</td>
+								<td class="corder">고재광</td>
+								<td class="ddate">07/17</td>
+								<td class="rdate"></td>
+								<td class="tag"></td>
+								<td class="log">
+									<dl>
+										<dt></dt>
+										<dd></dd>
+									</dl>
+								</td>
+							</tr>
+							<tr>
+								<td class="id">BD003</td>
+								<td class="depth2">가이드 작업</td>
+								<td class="depth3">
+									<details open>
+										<summary>관리자 페이지 테이블 타이포 가이드</summary>
+										<pre>
+											- 테이블 타이포 스타일 파악
+											- 컬러별, 크기별 가이드 잡기
+										</pre>
+									</details>
+								</td>
+								<td class="path">
+									<a href="../_ui_guide/guide_typo.html" target="_blank">guide_typo.html</a>
+								</td>
+								<td class="request">고재광</td>
+								<td class="corder">고재광</td>
+								<td class="ddate">07/17</td>
+								<td class="rdate"></td>
+								<td class="tag"></td>
+								<td class="log">
+									<dl>
+										<dt></dt>
+										<dd></dd>
+									</dl>
+								</td>
+							</tr>
+							<tr>
+								<td class="id">BD003</td>
+								<td class="depth2">코딩 수정</td>
+								<td class="depth3">
+									<details open>
+										<summary>웹표준성, 접근수정</summary>
+										<pre>
+											- 탭 라벨 , h2 태그 넣기 표준성 aria-tab
+											- table row 넣어야함 scope
+											- thead-tfoot-tbody / caption
+											- a태그  role= button /  button type=butoon
+											- 사이트 하단에 footer 넣기
+											- h1 a 링크 javascript:void(0)
+											- ID 값 적절하게 사용하기
+											- svg, png 경로 기록하기
+										</pre>
+									</details>
+								</td>
+								<td class="path">
+									<a href="../_ui_guide/guide.html" target="_blank">guide.html</a>
+								</td>
+								<td class="request">고재광</td>
+								<td class="corder">고재광</td>
+								<td class="ddate">07/17</td>
+								<td class="rdate"></td>
+								<td class="tag"></td>
+								<td class="log">
+									<dl>
+										<dt></dt>
+										<dd></dd>
+									</dl>
+								</td>
+							</tr>
+							<tr>
+								<td class="id">BD002</td>
+								<td class="depth2">Tool</td>
+								<td class="depth3">
+									<details open>
+										<summary>Transform: HTML to JSX [localhost 설치]</summary>
+										<pre>
+							🟢 설치 및 실행 방법은 다음과 같습니다.
+							1. 터미널을 열고 프로젝트 폴더로 이동합니다.
+							2. 다음 명령어를 순서대로 실행하세요:
+							- yarn
+							- yarn dev (개발용 실행)
+							- 또는, 배포용으로 실행하려면 yarn build && yarn start
+							- 추가적으로 yarn이 설치되어 있지 않다면, 먼저 Node.js와 yarn을 설치해야 합니다.
+
+							🟢 Yarn 설치
+							- npm이 설치되어 있다면: npm install --global yarn
+							- yarn --version
+
+							🟢 버전을 전환: 현재 설치된 Node.js 버전(18.18.0)이 프로젝트에서 요구하는 버전(16.x)과 맞지 않을때
+							- nvm install 16
+							- nvm use 16
+							- node -v
+
+							🟢 Windows에서 nvm(Node Version Manager)을 설치
+							1. nvm-windows 공식 <a href="https://github.com/coreybutler/nvm-windows/releases" target="_blank">GitHub</a>에서 최신 nvm-setup.zip 파일을 다운로드합니다.
+							2. 압축을 풀고 nvm-setup.exe 파일을 실행
+							- nvm version
+							4. nvm으로 Node.js를 설치한 후, 터미널을 완전히 종료했다가 다시 열어야 환경변수가 적용
+							5. 이제 원하는 Node.js 버전을 설치하고 사용할 수 있습니다
+							- nvm install 16
+							- nvm use 16
+							- node -v
+
+							🟢 nvm으로 node 최신 버전으로 변경
+							1. 최신 LTS 버전 설치
+							- nvm install lts
+							2. 최신 LTS 버전 사용
+							- nvm use lts
+							3. 또는, 최신 버전 전체를 설치/사용하려면
+							- nvm install latest
+							- nvm use latest
+							4. 현재 적용된 node 버전 확인
+							- node -v
+
+							🟢 프로젝트마다 다른 Node.js 버전을 사용하려면, 각 프로젝트 폴더에
+							.nvmrc 파일을 만들어 원하는 버전을 지정하면 됩니다.
+							1. 프로젝트 루트에 .nvmrc 파일 생성
+							2. 파일 안에 사용할 Node.js 버전(예: 16.20.0 또는 16)을 입력
+							3. 해당 프로젝트 폴더에서 아래 명령어 실행
+							그러면 .nvmrc에 지정된 버전으로 자동 전환됩니다.
+							- nvm use
+
+							Tip:
+							여러 프로젝트에서 각각 다른 Node.js 버전을 쉽게 관리할 수 있습니다.
+							.nvmrc 파일만 프로젝트마다 다르게 작성하면 됩니다.
+						</pre>
+									</details>
+								</td>
+								<td class="path">
+									<a href="https://transform.tools/html-to-jsx" target="_blank">HTML to JSX</a>
+								</td>
+								<td class="request"></td>
+								<td class="corder"></td>
+								<td class="ddate">05/19</td>
+								<td class="rdate"></td>
+								<td class="tag"></td>
+								<td class="log">
+									<dl>
+										<dt></dt>
+										<dd></dd>
+									</dl>
+								</td>
+							</tr>
+							<tr>
+								<td class="id">AD002</td>
+								<td class="depth2">그리드</td>
+								<td class="depth3">IBsheet8: 개발 그리드 예정</td>
+								<td class="path"><a href="https://www.ibsheet.com/">ibsheet</a></td>
+								<td class="request"></td>
+								<td class="corder"></td>
+								<td class="ddate">06/25</td>
+								<td class="rdate">N/A</td>
+								<td class="tag"></td>
+								<td class="log">
+									<dl>
+										<dt></dt>
+										<dd></dd>
+									</dl>
+								</td>
+							</tr>
+							<tr>
+								<td class="id"></td>
+								<td class="depth2">He</td>
+								<td class="depth3">
+									<details>
+										<summary></summary>
+										<pre>
+							단락
+							⭐️ 🔹 🔸 🚩 📌 📝 📖 🟢 🟡 🔥 ➖ ➡️ 🧩
+							✅ ❌ 📌 ❓ ❗️ ❤️ ⭐️ 📣 🔒 🔓 💡 👍 👉 👀 👂 🐛
+
+							기본 이모지
+							😀 😃 😄 😁 😆 😅 😂 🤣 😊 😇 🙂 🙃 😉 😌 😍 🥰 😘 😗 😙 😚
+							😋 😜 😝 😛 🤑 🤗 🤭 🤫 🤔 🤐 🤨 😐 😑 😶 🙄 😏 😣 😥 😮‍💨
+							😮 😯 😲 😳 🥺 😦 😧 😨 😰 😱 😢 😥 🤤 😭 😓 😩 😫 🥱 😤
+							😡 😠 🤬 😈 👿
+
+							손/제스처
+							👍 👎 👊 ✊ 🤛 🤜 🤞 ✌️ 🤟 🤘 🤙 🖕 🖐️ ✋ 🤚 👋 🤲 🙌 👐
+							👏 🤝 🙏
+
+							동물
+							🐶 🐱 🐭 🐹 🐰 🦊 🐻 🐼 🐨 🐯 🦁 🐮 🐷 🐸 🐵 🙈 🙉 🙊
+
+							음식
+							🍏 🍎 🍐 🍊 🍋 🍌 🍉 🍇 🍓 🫐 🍈 🍒 🍑 🥭 🍍 🥥 🥝 🍅 🍆
+							🥑 🥦 🥬 🥒 🌶️ 🫑 🌽 🥕 🥔 🍠 🧄 🧅
+
+							기타
+							❤️ 🧡 💛 💚 💙 💜 🖤 🤍 🤎 💔 ❣️ 💕 💞 💓 💗 💖 💘 💝 💟
+							⭐ 🌟 ✨ ⚡ 💥 🔥 🌈 ☀️ 🌤️ ⛅ ☁️ 🌧️ ⛈️ 🌩️ 🌨️ ❄️
+						</pre
+										>
+									</details>
+								</td>
+								<td class="path">N/A</td>
+								<td class="request"></td>
+								<td class="corder"></td>
+								<td class="ddate">07/03</td>
+								<td class="rdate">07/03</td>
+								<td class="tag"></td>
+								<td class="log">
+									<dl>
+										<dt></dt>
+										<dd></dd>
+									</dl>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- //content -->
+		</div>
+		<!-- //wrap -->
+	</body>
+</html>

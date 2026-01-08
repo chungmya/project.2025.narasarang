@@ -1,0 +1,127 @@
+/* table */
+
+.uiux-body {
+	.q-table__container {
+		&.custom-table {
+			border-radius: 0;
+			box-shadow: none;
+			.q-table__top {
+				padding: 0;
+			}
+			.q-table__middle {
+				margin-top: 1.6rem;
+				border-top: 1px solid var(--grey-90);
+				.q-table {
+					thead {
+						background-color: var(--grey-10);
+					}
+					th {
+						font-size: var(--fz-xs);
+						text-align: center;
+					}
+					td {
+						font-size: var(--fz-xs);
+					}
+				}
+				&.scroll {
+					max-height: 546px;
+				}
+			}
+			.q-table__bottom {
+				min-height: auto;
+				padding: 0;
+				&--nodata {
+					justify-content: center;
+					padding: 1.6rem;
+					border-top: none;
+					border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+					@include font(1.7rem);
+					.q-icon {
+						display: none;
+					}
+				}
+			}
+			/* inner checkbox */
+			.q-checkbox {
+				align-self: center;
+				.q-checkbox__ {
+					&inner {
+						color: var(--grey-60);
+						font-size: 2rem;
+						&--indet {
+							color: var(--primary-50);
+							.q-checkbox__bg {
+								background-size: 0, 0, contain;
+							}
+						}
+						&--truthy {
+							color: var(--primary-50);
+							.q-checkbox__bg {
+								background-size: 0, contain, 0;
+							}
+						}
+					}
+					&bg {
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						border: none;
+						border-radius: 0.4rem;
+						background:
+							url(../assets/images/common/icon-20-checkbox-off.svg) no-repeat center/contain,
+							url(../assets/images/common/icon-20-checkbox-on.svg) no-repeat center/0,
+							url(../assets/images/common/icon-20-checkbox-indet.svg) no-repeat center/0;
+						background-color: var(--white);
+					}
+					&svg {
+						display: none;
+					}
+					&label {
+						margin: 0 1.6rem 0 0.4rem;
+						color: var(--grey-90);
+						font-size: var(--fz-sm);
+						line-height: 1.176;
+					}
+				}
+				&:not(.disabled):focus .q-checkbox__inner:before,
+				&:not(.disabled):hover .q-checkbox__inner:before {
+					transform: scale3d(1.8, 1.8, 1);
+				}
+				&.disabled,
+				&[disabled] {
+					opacity: 1 !important;
+					.q-checkbox__ {
+						&inner {
+							&--indet {
+								.q-checkbox__bg {
+									background-size: 0, 0, contain;
+								}
+							}
+							&--truthy {
+								color: var(--primary-50);
+								.q-checkbox__bg {
+									background-size: 0, contain, 0;
+								}
+							}
+						}
+						&bg {
+							background-image:
+								url(../assets/images/common/icon-20-checkboxdisable-off.svg),
+								url(../assets/images/common/icon-20-checkboxdisable-on.svg),
+								url(../assets/images/common/icon-20-checkboxdisable-indet.svg);
+						}
+						&label {
+							color: var(--grey-50);
+						}
+					}
+				}
+			}
+			.link {
+				color: var(--primary-50);
+				text-decoration: underline;
+				text-underline-offset: 3px;
+			}
+		}
+	}
+}

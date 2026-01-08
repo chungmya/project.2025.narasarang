@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+gulpfile.js
+
+# Build outputs
+dist/
+build/
+*.min.js
+*.min.css
+*.map
+
+# Generated files
+webapp/assets/css/
+webapp/html/_ui_guide/resources/
+
+# Specific files to ignore
+webapp/html/_ui_guide/worklist*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
+*.log

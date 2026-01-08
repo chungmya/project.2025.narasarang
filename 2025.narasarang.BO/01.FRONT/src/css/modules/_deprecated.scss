@@ -1,0 +1,6 @@
+//확인필요
+body.platform-ios .q-dialog__inner--minimized > div.layer-wrapper,
+body.platform-android:not(.native-mobile) .q-dialog__inner--minimized > div.layer-wrapper {
+	max-height: calc(100vh - 32px);
+	margin: 0;
+}

@@ -1,0 +1,94 @@
+/**
+ * work/_bluepark.scss
+  * work/_bp_form.scss
+ * ------------------
+ */
+
+//common styles for admin
+$text-color: #464c53;
+$primary-color: #256ef4;
+$secondary-color: #063a74;
+$gray-color: #8a949e;
+
+$primary-color: #256ef4;
+
+루트 정리 해야함
+// :root {
+//   --primary-color: #{$primary-color};
+// }
+// outline: 1px solid var(--primary-color);
+
+/*---------------------------------------------*/
+/*  selection controls  */
+/*---------------------------------------------*/
+/*---------------------------------------------*/
+/*  checkbox  */
+/*---------------------------------------------*/
+input[type='checkbox'] {
+	vertical-align: middle;
+	width: 2rem;
+	height: 2rem;
+	&::before {
+		display: block;
+		content: '';
+		width: 2rem;
+		height: 2rem;
+		background: url($imgpath + 'common/icon_chk.svg') no-repeat center / contain;
+	}
+	&:checked {
+		&::before {
+			background: url($imgpath + 'common/icon_chk_checked.svg') no-repeat center / contain;
+		}
+	}
+	&:disabled {
+		&::before {
+			background: url($imgpath + 'common/icon_chk_disable.svg') no-repeat center / contain;
+		}
+		+ label {
+			color: #8a949e;
+		}
+	}
+	&:checked:disabled {
+		&::before {
+			background: url($imgpath + 'common/icon_chk_disChecked.svg') no-repeat center / contain;
+		}
+	}
+	&:focus,
+	&:focus-visible {
+		outline: 1px solid $primary-color;
+	}
+}
+
+/*---------------------------------------------*/
+/*  radio  */
+/*---------------------------------------------*/
+input[type='radio'] {
+	vertical-align: middle;
+	width: 1.8rem;
+	height: 1.8rem;
+	&::before {
+		display: block;
+		content: '';
+		width: 2rem;
+		height: 2rem;
+		background: url($imgpath + 'common/icon_radio.svg') no-repeat center / contain;
+	}
+	&:checked {
+		&::before {
+			background: url($imgpath + 'common/icon_radio_checked.svg') no-repeat center / contain;
+		}
+	}
+	&:disabled {
+		&::before {
+			background: url($imgpath + 'common/icon_radio_disable.svg') no-repeat center / contain;
+		}
+		+ label {
+			color: #8a949e;
+		}
+	}
+	&:checked:disabled {
+		&::before {
+			background: url($imgpath + 'common/icon_radio_disChecked.svg') no-repeat center / contain;
+		}
+	}
+}

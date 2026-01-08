@@ -1,0 +1,56 @@
+//=======================================================
+// Typograpy
+//=======================================================
+html {
+	font-size: 62.5%;
+} /* rem 기준 폰트 사이즈 */
+body {
+	font-family: $font-family-base;
+}
+@mixin heading-lg {
+	font-size: rem(32);
+	font-weight: 700;
+	line-height: 1.5;
+	letter-spacing: rem(-1);
+}
+
+@mixin -md {
+	font-size: rem(30);
+	font-weight: 700;
+	line-height: 1.5;
+	letter-spacing: rem(-1);
+}
+
+//=======================================================
+// Typograpy-table
+//=======================================================
+
+// size
+@mixin head-mid {
+	font-size: rem(30);
+	line-height: 150%;
+	color: #242424;
+}
+
+@mixin body-mid {
+	font-size: rem(16);
+	line-height: 150%;
+}
+
+@mixin body-small {
+	font-size: rem(14);
+	color: #33363d;
+	line-height: 150%;
+}
+
+@mixin tit-xxsmall {
+	font-size: rem(16);
+	line-height: 150%;
+	color: #000;
+}
+
+@mixin tit-small {
+	font-size: rem(20);
+	line-height: 150%;
+	color: #1e2124;
+}

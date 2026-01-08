@@ -1,0 +1,48 @@
+//=======================================================
+// varibles
+//=======================================================
+
+// * Images
+//--------------
+$imgpath: '../images/';
+
+// * Font
+//--------------
+$font-family-base: 'Pretendard GOV', 'Roboto', 'Helvetica', 'Arial', sans-serif, '맑은 고딕';
+$font-size-base: 1.6rem !default;
+
+// * Color
+//-----------------
+$white: #fff !default;
+$black: #000 !default;
+
+//Theme Color
+$Brand: #121c72 !default;
+$primary: #121c72 !default;
+$secondary: #121c72 !default;
+
+//Tehme Color - green
+$g-header: #172d26;
+
+// * Layout
+//-----------------
+$screen_max_width: rem(1600);
+$content_max_width: rem(1492);
+$content_max_width_sm: rem(800);
+
+$side_space: rem(20);
+$top_space: rem(160);
+$btm_space: rem(160);
+$top_space_mo: rem(140);
+$btm_space_mo: rem(80);
+$header_height: rem(84);
+$footer_height: rem(388);
+$mo_footer_height: rem(594);
+
+$content_bottom_space: rem(160); //content 하단 여백
+$mo_content_bottom_space: rem(80); //content 하단 여백
+
+//admin03
+// variables/_font.scss
+$font-weight-bold: 700;
+$font-weight-regular: 400;

@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+/**
+ * uolList
+ * ------------------
+ */
+
+
+
+@mixin bul_dot(){
+	position: relative;padding-left: .6rem; 
+	&:before{content: ""; position: absolute; top: 0.35rem; left: .1rem;  width:.3rem; height:.3rem; background-color: #75747A; border-radius: 50%;}
+	&.blue:before {background:#445FE6}
+	&.red:before {background:#F2303C}
+}
+
+@mixin bul_bar(){
+	position: relative;padding-left: .6rem;
+	&:before{
+		content: ''; position: absolute; top: .4rem; left: 0; width: .3rem; height: .1rem; background: #75747A; 
+	}
+	&.blue:before {background:#445FE6}
+	&.red:before {background:#F2303C}
+}
+
+@mixin bul_ref(){
+	position: relative;padding-left:1.4rem;
+	&:before{ 
+		content: '※'; position: absolute; top: 0; left: 0; font-size:1.8rem; color: #555555;
+	}
+}
+
+@mixin uol_list(){
+	> strong{display: block; font-weight: bold; margin-top: 0.8rem; margin-bottom: 0.4rem;
+		&:first-child{margin-top: 0;}
+	}
+
+	p{margin-top: .4rem;}
+	p, div{text-indent: 0;}
+
+	ul + p,
+	ol + p,
+	p + ul,
+	p + ol,
+	ul + ul,
+	ol + ol,
+	ul + ol,
+	ol + ul{margin-top: .8rem;}
+
+	ul,
+	ol{
+		li{position: relative; margin-top: .3rem; word-break: break-all; color: #101010;
+			ul, ol{
+				// margin-top: .2rem; 
+				li{color: #403F48; margin-top: 0;}
+			} 
+		}
+		li:first-child{margin-top: 0;}
+
+		// li li{margin-top: 0;}
+	}
+
+	ol{
+		li{padding-left: 1.9rem;text-indent:-1.9rem; 
+			> * {text-indent: initial;}
+			&:first-letter {letter-spacing: .3rem;}
+			li{padding-left: 1.5rem;text-indent:-1.5rem;}
+			ul{
+				li{@include bul_bar(); padding-left: 1.6rem;text-indent:0;
+					&:first-letter {letter-spacing: 0;}}
+			}
+			ol{
+				li{padding-left:0; text-indent:-1.2rem; //padding-left: 1.2rem; 
+					&:first-letter {letter-spacing: 0;}
+				}
+			}
+		}
+	}
+
+	ul > li{@include bul_dot();
+		> ul >li{@include bul_bar();} 
+	}
+
+	// * ref
+	.ref{@include bul_ref(); color: #101010;}
+
+	ul, ol {
+		li{
+			.ref{margin-left: -1rem;}
+			li .ref{color: #403F48;}
+		}
+	}
+}
+
+.bulDot{@include bul_dot()}
+.bulBar{@include bul_bar()}
+.bulRef{@include bul_ref()}
+
+.uolList{
+  // @include Body_16R;
+  @include uol_list;
+
+  h2{
+  	&:first-child{margin-top: 0;}
+  	margin-top: 10px;
+  	font-weight: bold;
+  	font-size: 14px;
+  }
+	// &.isScroll{@include scroll;max-height:7.6rem;}
+}
+
+
+// .tableArea + .uolList {margin-top: rem(20)}
+// .uolList + .tableArea{margin-top: 1.6rem;
+// 	.tableArea + & {margin-top:2.4rem;}
+// }
+// .uolList + .tabArea {margin-top:2.4rem;}
+// .infoBox + .tableArea{margin-top: 2.4rem;}
+
+
+//todo depth3 desc: 2025-05-19 추가
+//-----------------------
+[data-page="todo"]{
+	.tab_contents_wrap{
+		td.depth3{
+			.uolList{
+				&.scroll{
+					width:95%; height: 300px; overflow: auto;margin:10px;border: 1px solid #ccc;
+				}
+
+				/*li{ padding-left:10px;}
+				> ul{
+					> li{
+						margin-top:10px;
+
+						> ul:not(:last-child){ margin-bottom:10px;}
+					}					
+				}*/
+			}
+		}
+	}
+}

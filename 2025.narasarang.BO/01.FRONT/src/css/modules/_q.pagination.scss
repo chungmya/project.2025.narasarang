@@ -1,0 +1,132 @@
+/* pagination */
+
+.uiux-body {
+	.go-page-group {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		margin-top: 0.8rem;
+		font-size: var(--fz-xs);
+
+		.q-input {
+			width: 4.2rem;
+			margin-right: 0.4rem;
+		}
+		.q-btn {
+			margin-left: 1.6rem;
+		}
+	}
+	.q-pagination {
+		&.custom-pagination {
+			justify-content: center;
+			position: relative;
+			width: 100%;
+			margin-top: 4rem;
+			@include bpm('sm') {
+				margin-top: 2rem;
+			}
+			@include bpb('xs') {
+				padding-top: 5.6rem;
+			}
+			.q-pagination__content {
+				.q-btn {
+					min-width: 4rem !important;
+					height: 4rem;
+					padding: 0 0.4rem !important;
+					border-radius: 0.6rem;
+					background-color: #fff;
+					@include font(var(--fz-sm));
+					&::before {
+						box-shadow: none;
+					}
+					&.text-primary {
+						color: var(--grey-70) !important;
+					}
+					&.bg-primary {
+						font-weight: var(--fw-700);
+						&:hover {
+							&::before {
+								background-color: #fff;
+								opacity: 0.1;
+							}
+						}
+						&:focus {
+							&::before {
+								background-color: #fff;
+								opacity: 0.2;
+							}
+						}
+						.q-focus-helper {
+							display: none;
+						}
+					}
+					&.q-focusable:focus > .q-focus-helper,
+					&.q-manual-focusable--focused > .q-focus-helper,
+					&.q-hoverable:hover > .q-focus-helper {
+						background: var(--primary-5);
+						opacity: 1;
+					}
+					&.q-focusable:focus > .q-focus-helper,
+					&.q-manual-focusable--focused > .q-focus-helper {
+						background: var(--primary-20);
+						opacity: 1;
+					}
+				}
+
+				/* prev, next */
+				> .q-btn {
+					&:first-child {
+						padding: 0 0.8rem 0 0.4rem !important;
+						@include bpb('xs') {
+							margin: 0;
+							position: absolute;
+							top: 0;
+							left: 50%;
+							transform: translateX(-110%);
+						}
+						.q-btn__content {
+							&::after {
+								content: '이전';
+							}
+							.q-icon {
+								width: 2rem;
+								height: 2rem;
+								background: url(../assets/images/common/icon-20-paging-prev.svg) no-repeat
+									center/contain;
+								color: transparent;
+								font-size: 0;
+							}
+						}
+					}
+					&:last-child {
+						padding: 0 0.4rem 0 0.8rem !important;
+						@include bpb('xs') {
+							margin: 0;
+							position: absolute;
+							top: 0;
+							right: 50%;
+							transform: translateX(110%);
+						}
+						.q-btn__content {
+							&::before {
+								content: '다음';
+							}
+							.q-icon {
+								width: 2rem;
+								height: 2rem;
+								background: url(../assets/images/common/icon-20-paging-next.svg) no-repeat
+									center/contain;
+								color: transparent;
+								font-size: 0;
+							}
+						}
+					}
+					&.disabled {
+						opacity: 0.7 !important;
+					}
+				}
+			}
+		}
+	}
+}

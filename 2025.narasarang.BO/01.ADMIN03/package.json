@@ -1,0 +1,45 @@
+{
+	"name": "workflows",
+	"version": "1.0.0",
+	"type": "module",
+	"description": "",
+	"main": "gulpfile.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+		"format": "prettier --write .",
+		"format:check": "prettier --check .",
+		"dev": "set SASS_SILENCE_DEPRECATIONS=* && gulp 2>nul",
+		"build": "set SASS_SILENCE_DEPRECATIONS=* && gulp SCSS:COMMON 2>nul"
+	},
+	"author": "Goang",
+	"license": "ISC",
+	"devDependencies": {
+		"@eslint/js": "^9.30.1",
+		"autoprefixer": "^10.4.20",
+		"browser-sync": "^3.0.3",
+		"eslint": "^9.30.1",
+		"eslint-config-prettier": "^10.1.5",
+		"eslint-plugin-prettier": "^5.5.1",
+		"gulp": "^5.0.0",
+		"gulp-cli": "^3.0.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-postcss": "^10.0.0",
+		"gulp-rename": "^2.0.0",
+		"gulp-sass": "^6.0.0",
+		"gulp-size": "^5.0.0",
+		"gulp-sourcemaps": "^2.6.5",
+		"gulp-uglify": "^3.0.2",
+		"prettier": "^3.6.2",
+		"sass": "^1.89.2"
+	},
+	"browserslist": [
+		"> 1%",
+		"last 2 versions"
+	],
+	"dependencies": {
+		"gsap": "^3.13.0",
+		"swiper": "^11.2.10"
+	}
+}

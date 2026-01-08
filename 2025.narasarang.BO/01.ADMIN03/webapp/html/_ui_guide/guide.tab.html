@@ -1,0 +1,98 @@
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>나라사랑포털 | BO</title>
+		<script src="../../assets/js/ui.common.js"></script>
+		<link rel="stylesheet" href="../../assets/css/ui.common.css" type="text/css" />
+		<script src="../../assets/js/bluepark.js"></script>
+
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {});
+		</script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!--begin::Header-->
+			<script type="text/javascript" src="../_ui_include/gnb.js"></script>
+			<!--end::Header-->
+
+			<div class="contents">
+				<!--begin::aside-->
+				<script type="text/javascript" src="../_ui_include/aside.js"></script>
+				<!--end::Sidebar-->
+
+				<!-- tab -->
+				<div class="contents-area">
+					<div class="cont-box">
+						<section>
+							<div class="heading">
+								<h3>Contents Tab</h3>
+							</div>
+
+							<div class="tab-area">
+								<ul class="tab-menu" role="tab-list">
+									<li>
+										<button class="current" data-tab="tab-1">tab-1</button>
+									</li>
+									<li>
+										<button data-tab="tab-2">tab-2</button>
+									</li>
+									<li>
+										<button data-tab="tab-3">tab-3</button>
+									</li>
+								</ul>
+
+								<div class="tab-container">
+									<div id="tab-1" class="tab-contents display-block">
+										<div>
+											<div class="heading">
+												<h4>Contents Tab01 컨텐츠 내용 tab > sub-tab</h4>
+											</div>
+
+											<div class="sub-tab-wrap">
+												<ul class="sub-tab" role="tab-list">
+													<li><button class="current" data-tab="sub-tab-1">sub-tab-1</button></li>
+													<li><button data-tab="sub-tab-2">sub-tab-2</button></li>
+													<li><button data-tab="sub-tab-3">sub-tab-3</button></li>
+													<li><button data-tab="sub-tab-4">sub-tab-4</button></li>
+													<li><button data-tab="sub-tab-5">sub-tab-5</button></li>
+													<li><button data-tab="sub-tab-4">sub-tab-6</button></li>
+													<li><button data-tab="sub-tab-5">sub-tab-7</button></li>
+													<li><button data-tab="sub-tab-5">sub-tab-8</button></li>
+												</ul>
+
+												<div class="tab-container">
+													<div id="sub-tab-1" role="tabpanel1" class="sub-tab-contents display-block">
+														<p>sub-tab-1</p>
+													</div>
+													<div id="sub-tab-2" role="tabpanel2" class="sub-tab-contents tab-contents">
+														<p>sub-tab-2</p>
+													</div>
+													<div id="sub-tab-3" role="tabpanel3" class="sub-tab-contents tab-contents">
+														<p>sub-tab-3</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div id="tab-2" class="tab-contents">
+										<div class="heading">
+											<h4>Contents Tab02 contents</h4>
+										</div>
+									</div>
+									<div id="tab-3" class="tab-contents">
+										<div class="heading">
+											<h4>Contents Tab03 contents</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+
+				<!-- //tab -->
+			</div>
+		</div>
+	</body>
+</html>

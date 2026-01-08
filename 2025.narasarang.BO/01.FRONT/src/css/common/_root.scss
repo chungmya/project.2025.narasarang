@@ -1,0 +1,166 @@
+//KRDS 추후 수정예정
+:root {
+	--krds-typo-font-type: Pretendard GOV;
+	--krds-typo-font-weight-regular: Regular;
+	--krds-typo-font-weight-bold: Bold;
+	--krds-typo-letter-spacing-0: 0rem;
+	--krds-typo-letter-spacing-1: 0.1rem;
+	--krds-number-0: 0rem;
+	--krds-number-1: 0.1rem;
+	--krds-number-2: 0.2rem;
+	--krds-number-3: 0.4rem;
+	--krds-number-4: 0.6rem;
+	--krds-number-5: 0.8rem;
+	--krds-number-6: 1rem;
+	--krds-number-7: 1.2rem;
+	--krds-number-8: 1.6rem;
+	--krds-number-9: 2rem;
+	--krds-number-10: 2.4rem;
+	--krds-number-11: 2.8rem;
+	--krds-number-12: 3.2rem;
+	--krds-number-13: 3.6rem;
+	--krds-number-14: 4rem;
+	--krds-number-15: 4.4rem;
+	--krds-number-16: 4.8rem;
+	--krds-number-17: 5.6rem;
+	--krds-number-18: 6.4rem;
+	--krds-number-19: 7.2rem;
+	--krds-number-20: 8rem;
+	--krds-number-21: 9.6rem;
+	--krds-number-max: 100rem;
+
+	//svg icon size
+	@each $size, $value in $icon-sizes {
+		--krds-icon--size-#{$size}: #{$value};
+	}
+}
+
+:root {
+	/***** custom quasar color *****/
+	--q-primary: var(--primary-50);
+	--q-secondary: var(--secondary-50);
+	--q-negative: var(--danger-50);
+
+	/***** 1rem = 10px *****/
+	font-size: 10px;
+
+	/***** height size *****/
+	--h-xxl: 7.2rem;
+	--h-xl: 6.4rem;
+	--h-lg: 5.6rem;
+	--h-md: 4.8rem;
+	--h-sm: 4rem;
+	--h-xs: 3.2rem;
+	--h-xxs2: 2.6rem;
+	--h-xxs: 2.4rem;
+
+	/***** color *****/
+	color: var(--grey-90);
+
+	--black: #000000;
+	--white: #ffffff;
+
+	--primary-0: #ffffff;
+	--primary-5: #edf2f9;
+	--primary-10: #d3e1fb;
+	--primary-20: #a7c4f7;
+	--primary-30: #6596ef;
+	--primary-40: #0d63d4;
+	--primary-50: #014aaa;
+	--primary-60: #143f90;
+	--primary-70: #0b2d6a;
+	--primary-80: #032259;
+	--primary-90: #081d44;
+	--primary-100: #000000;
+
+	--secondary-0: #ffffff;
+	--secondary-5: #e6f4f1;
+	--secondary-10: #c3e4dd;
+	--secondary-20: #91d8c9;
+	--secondary-30: #4dc6ad;
+	--secondary-40: #01a786;
+	--secondary-50: #00866b;
+	--secondary-60: #007059;
+	--secondary-70: #035c4a;
+	--secondary-80: #00162f;
+	--secondary-90: #000b17;
+	--secondary-100: #000000;
+
+	--grey-0: #ffffff;
+	--grey-5: #f8f8f8;
+	--grey-10: #f0f0f0;
+	--grey-20: #e4e4e4;
+	--grey-30: #d8d8d8;
+	--grey-40: #c6c6c6;
+	--grey-50: #8e8e8e;
+	--grey-60: #717171;
+	--grey-70: #555555;
+	--grey-80: #2d2d2d;
+	--grey-90: #1d1d1d;
+	--grey-100: #000000;
+
+	--point-0: #ffffff;
+	--point-5: #fff0f5;
+	--point-10: #fdcede;
+	--point-20: #fba6c2;
+	--point-30: #fe7ea9;
+	--point-40: #f6548a;
+	--point-50: #e70c55;
+	--point-60: #cb0044;
+	--point-70: #a90038;
+	--point-80: #780028;
+	--point-90: #3e0015;
+	--point-100: #000000;
+
+	/* system */
+	--danger-5: #feecf0;
+	--danger-10: #fcd4de;
+	--danger-50: #eb003b;
+	--danger-60: #d50136;
+
+	--warning-5: #fff8e9;
+	--warning-10: #ffeac1;
+	--warning-50: #ffb724;
+	--warning-60: #98690a;
+
+	--success-5: #eef7f0;
+	--success-10: #cee9d4;
+	--success-50: #008a1e;
+	--success-60: #006e18;
+
+	--information-5: #e9f0ff;
+	--information-10: #d4e1ff;
+	--information-50: #2768ff;
+	--information-60: #1f53cc;
+
+	/* other */
+
+	/***** font *****/
+	/* font size */
+	--h-fz-xl: 6.6rem;
+	--h-fz-lg: 5rem;
+	--h-fz-md: 4rem;
+	--h-fz-sm: 3.2rem;
+
+	--fz-xxl: 2.9rem;
+	--fz-xl: 2.7rem;
+	--fz-lg: 2.5rem;
+	--fz-lg2: 2.3rem;
+	--fz-lg3: 2.1rem;
+	--fz-md: 1.9rem;
+	--fz-sm: 1.7rem;
+	--fz-xs: 1.5rem;
+	--fz-xxs: 1.3rem;
+
+	/* font weight */
+	--fw-900: 900;
+	--fw-800: 800;
+	--fw-700: 700;
+	--fw-600: 600;
+	--fw-500: 500;
+	--fw-400: 400;
+	--fw-300: 300;
+	--fw-200: 200;
+	--fw-100: 100;
+	--q-transition-duration: .3s;
+}

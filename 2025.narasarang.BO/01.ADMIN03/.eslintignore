@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+*.min.js
+*.min.css
+*.map
+
+# Generated files
+src/assets/css/
+worklist/
+
+# OS generated files
+.DS_Store
+Thumbs.db

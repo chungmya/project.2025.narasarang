@@ -1,0 +1,58 @@
+// 에러 페이지
+.error-page-wrap {
+	max-width: calc(128rem + 4.8rem);
+	min-height: 40rem;
+	margin: 0 auto;
+	padding: 8rem 2.4rem;
+	@include bpm('ml') {
+		min-height: auto;
+	}
+	@include bpm('sm') {
+		padding: 4rem 1.6rem;
+	}
+	.error-text-box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		.icon-error-character {
+			display: block;
+			width: 28rem;
+			height: 28rem;
+			margin-top: 4rem;
+			background: url(../assets/images/common/icon-error-character.png) no-repeat center/contain;
+			@include bpm('sm') {
+				width: 20rem;
+				height: 20rem;
+				margin-top: 3.2rem;
+			}
+		}
+		.error-noti {
+			font-size: 6.6rem;
+			font-weight: var(--fw-700);
+			@include bpm('sm') {
+				font-size: 5rem;
+			}
+		}
+		.error-page-tit {
+			margin-top: 4rem;
+			font-size: 3.2rem;
+			color: var(--danger-50);
+			font-weight: var(--fw-700);
+			@include bpm('sm') {
+				margin-top: 3.2rem;
+				font-size: 2.1rem;
+			}
+		}
+		.error-page-desc {
+			margin-top: 2.4rem;
+			word-break: keep-all;
+		}
+	}
+	.btn-actions {
+		margin-top: 6.4rem;
+		@include bpm('sm') {
+			margin-top: 4rem;
+		}
+	}
+}

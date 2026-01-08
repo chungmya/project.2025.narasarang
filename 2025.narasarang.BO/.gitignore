@@ -1,0 +1,46 @@
+.DS_Store
+.thumbs.db
+node_modules
+node_modules/
+node_modules.zip
+.env
+
+# Quasar core related directories
+.quasar
+/dist
+/quasar.config.*.temporary.compiled*
+
+# Cordova related directories and files
+/src-cordova/node_modules
+/src-cordova/platforms
+/src-cordova/plugins
+/src-cordova/www
+
+# Capacitor related directories and files
+/src-capacitor/www
+/src-capacitor/node_modules
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# local .env files
+.env.local*
+*.map
+
+
+# 또는 특정 폴더의 CSS 파일만 제외
+webapp/assets/css/**/*.css
+webapp/assets/css/**/*.css.map
+/01.ADMIN/webapp/assets/css/ui.common.css.map
+/01.ADMIN/webapp/assets/css/ui.common.css
+/01.ADMIN02/webapp/assets/css/ui.common.css
+/01.ADMIN03/webapp/assets/css/ui.common.css
