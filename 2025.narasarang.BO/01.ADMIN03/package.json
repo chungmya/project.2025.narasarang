@@ -32,13 +32,15 @@
 		"gulp-sourcemaps": "^2.6.5",
 		"gulp-uglify": "^3.0.2",
 		"prettier": "^3.6.2",
-		"sass": "^1.89.2"
+		"sass": "^1.97.2"
 	},
 	"browserslist": [
 		"> 1%",
 		"last 2 versions"
 	],
 	"dependencies": {
+		"-": "^0.0.1",
+		"g": "^2.0.1",
 		"gsap": "^3.13.0",
 		"swiper": "^11.2.10"
 	}

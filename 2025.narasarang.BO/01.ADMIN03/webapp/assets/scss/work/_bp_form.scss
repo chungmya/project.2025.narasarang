@@ -12,7 +12,7 @@ $gray-color: #8a949e;
 
 $primary-color: #256ef4;
 
-루트 정리 해야함
+//루트 정리 해야함
 // :root {
 //   --primary-color: #{$primary-color};
 // }
@@ -28,6 +28,7 @@ input[type='checkbox'] {
 	vertical-align: middle;
 	width: 2rem;
 	height: 2rem;
+
 	&::before {
 		display: block;
 		content: '';
@@ -64,8 +65,8 @@ input[type='checkbox'] {
 /*---------------------------------------------*/
 input[type='radio'] {
 	vertical-align: middle;
-	width: 1.8rem;
-	height: 1.8rem;
+	width: 2rem;
+	height: 2rem;
 	&::before {
 		display: block;
 		content: '';
@@ -89,6 +90,28 @@ input[type='radio'] {
 	&:checked:disabled {
 		&::before {
 			background: url($imgpath + 'common/icon_radio_disChecked.svg') no-repeat center / contain;
+		}
+	}
+}
+
+/*---------------------------------------------*/
+/*  drop down  */
+/*---------------------------------------------*/
+.dropdown {
+	&-head {
+		border: 1px solid #cdd1d5;
+		border-radius: 0.8rem;
+	}
+	&-default {
+		padding: 0.7rem 5.2rem 0.7rem 1.5rem;
+		color: #1e2124;
+		text-align: left;
+		&:before {
+			content: '';
+			display: block;
+			width: 1.6rem;
+			height: 1.6rem;
+			background: url($imgpath + 'common/icon_arrow_gray.svg') left top / cover;
 		}
 	}
 }
