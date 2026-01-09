@@ -271,7 +271,7 @@ header {
 .heading {
 	padding: rem(32) 0;
 	h3 {
-		@include tit-medium;
+		//@include tit-medium;
 		font-weight: $font-weight-bold;
 	}
 	h4 {

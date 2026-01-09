@@ -4,7 +4,6 @@
 html {
 	font-size: 62.5%;
 } /* rem 기준 폰트 사이즈 */
-
 body {
 	font-family: $font-family-base;
 	font-size: rem(16);
@@ -13,17 +12,14 @@ body {
 	color: #464c53;
 	letter-spacing: -0.32px;
 }
-strong {
-	font-weight: 700;
-}
-
 @mixin heading-lg {
 	font-size: rem(32);
 	font-weight: 700;
 	line-height: 1.5;
 	letter-spacing: rem(-1);
 }
-@mixin heading-md {
+
+@mixin -md {
 	font-size: rem(30);
 	font-weight: 700;
 	line-height: 1.5;
@@ -36,32 +32,29 @@ strong {
 @mixin font-normal {
 	font-weight: 400;
 }
-@mixin form-title-md {
-	font-size: rem(16);
-	font-weight: 700;
-	line-height: 1.5;
+
+//=======================================================
+// Typograpy-table
+//=======================================================
+
+// size
+@mixin head-mid {
+	font-size: rem(30);
+	line-height: 150%;
+	color: #242424;
 }
 
-@mixin body-md {
-	// 추후 전체 검색 후 삭제
+@mixin body-mid {
 	font-size: rem(16);
-	line-height: 1.5;
+	line-height: 150%;
 }
-@mixin body-sm {
+
+@mixin body-small {
 	font-size: rem(14);
-	line-height: 1.5;
+	color: #33363d;
+	line-height: 150%;
 }
 
-@mixin h3 {
-	font-size: rem(24);
-	font-weight: 700;
-}
-@mixin h4 {
-	font-size: rem(20);
-	font-weight: 700;
-}
-
-//table-top-typoglu
 @mixin tit-xxsmall {
 	font-size: rem(16);
 	line-height: 150%;
@@ -74,37 +67,11 @@ strong {
 	color: #1e2124;
 }
 
-@mixin tit-medium {
+@mixin h3 {
 	font-size: rem(24);
-	line-height: 150%;
-	color: #1e2124;
-}
-
-.h3 {
-	@include h3;
-	color: #1e2124;
-}
-
-.h4 {
-	@include h4;
-}
-
-.h2,
-.h3,
-.h4,
-.h5 {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	sub {
-		font-size: rem(18);
-		margin-left: rem(8);
-	}
-}
-
-//250917 메인
-@mixin main-font-md {
-	font-size: rem(16);
 	font-weight: 700;
-	color: #1e2124;
+}
+@mixin h4 {
+	font-size: rem(20);
+	font-weight: 700;
 }
