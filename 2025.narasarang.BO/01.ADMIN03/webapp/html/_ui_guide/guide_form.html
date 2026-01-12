@@ -23,182 +23,434 @@
 
 				<!--begin::cotents-->
 				<div class="contents-area">
-					<div class="cont-box">
-						<div class="heading">
-							<h3>Guide Form</h3>
+					<div class="contents-wrap">
+						<div class="cont-box">
+							<div class="heading">
+								<h2>Guide Form</h2>
+							</div>
 						</div>
+
+						<!-- Selection Controls -->
+						<section class="section">
+							<div class="title-area">
+								<h3 class="h3">Selection Controls</h3>
+							</div>
+							<div class="table-area">
+								<div class="table-wrap">
+									<table class="table">
+										<colgroup>
+											<col width="20%" />
+											<col width="20%" />
+											<col width="20%" />
+											<col width="20%" />
+											<col width="20%" />
+										</colgroup>
+
+										<thead>
+											<tr>
+												<th scope="col" class="border-right">구분</th>
+												<th scope="col">checkbox</th>
+												<th scope="col">checkbox(label blind)</th>
+												<th scope="col">radiobox</th>
+												<th scope="col">radiobox(label blind)</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row" class="border-right">Enabled</th>
+												<td>
+													<span>
+														<input type="checkbox" id="chk1_1" name="chk1_1" />
+														<label for="chk1_1">Label</label>
+													</span>
+												</td>
+												<td>
+													<span>
+														<input type="checkbox" id="chk1_2" name="chk1_2" />
+														<label for="chk1_2"><span class="blind">Label</span></label>
+													</span>
+												</td>
+												<td>
+													<span>
+														<input type="radio" id="radio1_1" name="radio1_1" />
+														<label for="radio1_1">Label</label>
+													</span>
+												</td>
+												<td>
+													<span>
+														<input type="radio" id="radio1_2" name="radio1_2" />
+														<label for="radio1_2"><span class="blind">Label</span></label>
+													</span>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row" class="border-right">Enabled Selected</th>
+												<td>
+													<span>
+														<input type="checkbox" id="chk1_3" name="chk1_3" checked />
+														<label for="chk1_3">Label</label>
+													</span>
+												</td>
+												<td>
+													<span>
+														<input type="checkbox" id="chk1_4" name="chk1_4" checked />
+														<label for="chk1_4"><span class="blind">Label</span></label>
+													</span>
+												</td>
+												<td>
+													<span>
+														<input type="radio" id="radio1_3" name="radio1_3" checked />
+														<label for="radio1_3">Label</label>
+													</span>
+												</td>
+												<td>
+													<span>
+														<input type="radio" id="radio1_4" name="radio1_4" checked />
+														<label for="radio1_4"><span class="blind">Label</span></label>
+													</span>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row" class="border-right">Disabled</th>
+												<td>
+													<input type="checkbox" id="chk1_5" name="chk1_5" disabled />
+													<label for="chk1_5">Label</label>
+												</td>
+												<td>
+													<input type="checkbox" id="chk1_6" name="chk1_6" disabled />
+													<label for="chk1_6"><span class="blind">Label</span></label>
+												</td>
+												<td>
+													<input type="radio" id="radio1_5" name="radio1_5" disabled />
+													<label for="radio1_5">Label</label>
+												</td>
+												<td>
+													<input type="radio" id="radio1_6" name="radio1_6" disabled />
+													<label for="radio1_6"><span class="blind">Label</span></label>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row" class="border-right">Disabled Selected</th>
+												<td>
+													<input type="checkbox" id="chk1_7" name="chk1_7" checked disabled />
+													<label for="chk1_7">Label</label>
+												</td>
+												<td>
+													<input type="checkbox" id="chk1_8" name="chk1_8" checked disabled />
+													<label for="chk1_8"><span class="blind">Label</span></label>
+												</td>
+												<td>
+													<input type="radio" id="radio1_7" name="radio1_7" checked disabled />
+													<label for="radio1_7">Label</label>
+												</td>
+												<td>
+													<input type="radio" id="radio1_8" name="radio1_8" checked disabled />
+													<label for="radio1_8"><span class="blind">Label</span></label>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</section>
+
+						<!-- input type -->
+						<section class="section">
+							<div class="title-area">
+								<h3 class="h3">input type</h3>
+							</div>
+							<div class="table-area">
+								<div class="table-wrap">
+									<table class="table">
+										<colgroup>
+											<col width="20%" />
+											<col width="26.5%" />
+											<col width="26.5%" />
+											<col width="27%" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col" class="border-right">구분</th>
+												<th scope="col">input</th>
+												<th scope="col">textarea</th>
+												<th scope="col">select</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row" class="border-right">Default</th>
+												<td>
+													<div class="form-input clear"><input type="text" placeholder="텍스트" /></div>
+													<p class="msg-box"><span>메세지를 입력해 주세요.</span></p>
+												</td>
+												<td>
+													<div class="form-textarea">
+														<textarea placeholder="내용 입력"></textarea>
+														<p class="msg-box"><span>메세지를 입력해 주세요.</span></p>
+														<p class="txtcounter"><span>0</span> / 500</p>
+													</div>
+												</td>
+												<td>
+													<select>
+														<option>선택</option>
+														<option>선택1</option>
+														<option>선택2</option>
+														<option>선택3</option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row" class="border-right">Filled</th>
+												<td>
+													<input type="text" placeholder="텍스트" value="텍스트" />
+													<p class="msg-box"><span>메세지를 입력해 주세요.</span></p>
+												</td>
+												<td>
+													<div class="form-textarea">
+														<textarea placeholder="내용 입력">내용 입력</textarea>
+														<p class="msg-box"><span>메세지를 입력해 주세요.</span></p>
+														<p class="txtcounter"><span>0</span> / 500</p>
+													</div>
+												</td>
+												<td>
+													<select>
+														<option>선택</option>
+														<option>선택1</option>
+														<option>선택2</option>
+														<option>선택3</option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row" class="border-right">Focused</th>
+												<td>
+													<div class="focused">
+														<input type="text" value="텍스트" />
+													</div>
+													<p class="msg-box"><span>메세지를 입력해 주세요.</span></p>
+												</td>
+												<td>
+													<div class="form-textarea focused">
+														<textarea placeholder="내용 입력"></textarea>
+														<p class="msg-box success"><span>메세지를 입력 해주세요요</span></p>
+														<p class="txtcounter"><span>0</span> / 500</p>
+													</div>
+												</td>
+												<td>
+													<select class="focused">
+														<option>선택</option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row" class="border-right">Disabled</th>
+												<td>
+													<input type="text" value="텍스트" disabled />
+													<p class="msg-box"><span>메세지를 입력해 주세요.</span></p>
+												</td>
+												<td>
+													<div class="form-textarea disabled">
+														<textarea placeholder="내용 입력" disabled></textarea>
+														<p class="txtcounter"><span>0</span> / 500</p>
+													</div>
+												</td>
+												<td>
+													<select disabled>
+														<option>선택</option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row" class="border-right">Error</th>
+												<td>
+													<input type="text" value="텍스트" class="error" />
+													<p class="msg-box error"><span>에러메세지</span></p>
+												</td>
+												<td>
+													<div class="form-textarea error">
+														<textarea placeholder="내용 입력">내용 입력</textarea>
+														<p class="msg-box error"><span>에러메세지</span></p>
+														<p class="txtcounter"><span>0</span> / 500</p>
+													</div>
+												</td>
+												<td>
+													<select class="error">
+														<option>선택</option>
+													</select>
+													<p class="msg-box error"><span>에러메세지</span></p>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</section>
+
+						<!-- Formtype Selection Controls -->
+						<section class="section">
+							<div class="title-area">
+								<h3 class="h3">Formtype Selection Controls</h3>
+							</div>
+							<div class="table-area">
+								<div class="table-wrap">
+									<table class="table row-style">
+										<colgroup>
+											<col width="20%" />
+											<col width="80%" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<th scope="row">formtype checkbox/radio</th>
+												<td>
+													<div class="form-group-check">
+														<input type="radio" id="period2_1" name="periodChk" checked />
+														<label for="period2_1">당일</label>
+														<input type="radio" id="period2_2" name="periodChk" />
+														<label for="period2_2">1주일</label>
+														<input type="radio" id="period2_3" name="periodChk" />
+														<label for="period2_3">한달</label>
+														<input type="radio" id="period2_4" name="periodChk" />
+														<label for="period2_4">3개월</label>
+														<input type="radio" id="period2_5" name="periodChk" />
+														<label for="period2_5">6개월</label>
+														<input type="radio" id="period2_6" name="periodChk" />
+														<label for="period2_6">전체</label>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</section>
+
+						<!-- Calendar -->
+						<section class="section">
+							<div class="title-area">
+								<h3 class="h3">Calendar</h3>
+							</div>
+							<div class="table-area">
+								<div class="table-wrap">
+									<table class="table">
+										<colgroup>
+											<col width="20%" />
+											<col width="20%" />
+											<col width="20%" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col" class="border-right">기존방식</th>
+												<th scope="col">data 속성</th>
+												<th scope="col">직접호출</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<div class="form-cal lg">
+														<div class="datebox">
+															<input type="text" id="calendar1" placeholder="YY.MM.DD" />
+															<button type="button" onclick="showIBCalendar(this)" inp="calendar1"><em>달력</em></button>
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="form-cal lg">
+														<div class="datebox">
+															<input type="text" id="calendar2" placeholder="YY.MM.DD" />
+															<button type="button" data-calendar="calendar2"><em>달력</em></button>
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="form-cal lg">
+														<div class="datebox">
+															<input type="text" id="calendar3" placeholder="YY.MM.DD" />
+															<button type="button" onclick="IBCalendar.showById('calendar3', this)"><em>달력</em></button>
+														</div>
+													</div>
+												</td>
+											</tr>
+
+											<tr>
+												<td>
+													<div class="form-cal lg">
+														<div class="datebox">
+															<input type="text" id="month1" placeholder="YY.MM" />
+															<button type="button" onclick="showIBMonthCalendar(this)" inp="month1"><em>달력</em></button>
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="form-cal lg">
+														<div class="datebox">
+															<input type="text" id="calendar-month2" placeholder="YY.MM" />
+															<button type="button" data-month-calendar="calendar-month2"><em>달력</em></button>
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="form-cal lg">
+														<div class="datebox">
+															<input type="text" id="calendar-month3" placeholder="YY.MM" />
+															<button type="button" onclick="IBCalendar.showMonthById('calendar-month3', this)"><em>달력</em></button>
+														</div>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</section>
+
+						<!-- drop down -->
+						<section class="section">
+							<div class="title-area">
+								<h3 class="h4">Drop down</h3>
+							</div>
+							<div class="dropdown size-sm">
+								<div class="dropdown-head">
+									<button class="dropdown-default"><span>선택</span></button>
+								</div>
+								<div class="dropdown-body">
+									<ul class="dropdown-list">
+										<li>
+											<a href="javascript:void(0);" role="button" class="dropdown-item selected"><span>선택항목1</span></a>
+										</li>
+										<li>
+											<a href="javascript:void(0);" role="button" class="dropdown-item"><span>선택항목2</span></a>
+										</li>
+										<li>
+											<a href="javascript:void(0);" role="button" class="dropdown-item"><span>선택항목3</span></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</section>
+
+						<!-- select box -->
+						<section class="section">
+							<div class="title-area">
+								<h3 class="h4">Drop down</h3>
+							</div>
+						</section>
+
+						<!-- file upload -->
+						<section class="section">
+							<div class="title-area">
+								<h3 class="h4">file upload</h3>
+							</div>
+
+							<p><storng>등록(이미등록)</storng></p>
+							<div class="form-file">
+								<input type="file" accept="image/png, image/jpeg" id="inputfile01" />
+								<div class="input-file"></div>
+								<label for="inputfile01"><span>이미지등록</span></label>
+							</div>
+							<p class="file-text">사이즈 1840*690, 파일 확장자 png, jpg로 등록해 주세요.</p>
+						</section>
 					</div>
-
-					<!-- Selection Controls -->
-					<section class="section">
-						<div class="title-area">
-							<h3 class="h4">Selection Controls</h3>
-						</div>
-						<div class="table-area">
-							<div class="table-wrap">
-								<table class="table">
-									<colgroup>
-										<col width="20%" />
-										<col width="20%" />
-										<col width="20%" />
-										<col width="20%" />
-										<col width="20%" />
-									</colgroup>
-
-									<thead>
-										<tr>
-											<th scope="col" class="border-right">구분</th>
-											<th scope="col">checkbox</th>
-											<th scope="col">checkbox(label blind)</th>
-											<th scope="col">radiobox</th>
-											<th scope="col">radiobox(label blind)</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<th scope="row" class="border-right">Enabled</th>
-											<td>
-												<span>
-													<input type="checkbox" id="chk1_1" name="chk1_1" />
-													<label for="chk1_1">Label</label>
-												</span>
-											</td>
-											<td>
-												<span>
-													<input type="checkbox" id="chk1_2" name="chk1_2" />
-													<label for="chk1_2"><span class="blind">Label</span></label>
-												</span>
-											</td>
-											<td>
-												<span>
-													<input type="radio" id="radio1_1" name="radio1_1" />
-													<label for="radio1_1">Label</label>
-												</span>
-											</td>
-											<td>
-												<span>
-													<input type="radio" id="radio1_2" name="radio1_2" />
-													<label for="radio1_2"><span class="blind">Label</span></label>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<th scope="row" class="border-right">Enabled Selected</th>
-											<td>
-												<span>
-													<input type="checkbox" id="chk1_3" name="chk1_3" checked />
-													<label for="chk1_3">Label</label>
-												</span>
-											</td>
-											<td>
-												<span>
-													<input type="checkbox" id="chk1_4" name="chk1_4" checked />
-													<label for="chk1_4"><span class="blind">Label</span></label>
-												</span>
-											</td>
-											<td>
-												<span>
-													<input type="radio" id="radio1_3" name="radio1_3" checked />
-													<label for="radio1_3">Label</label>
-												</span>
-											</td>
-											<td>
-												<span>
-													<input type="radio" id="radio1_4" name="radio1_4" checked />
-													<label for="radio1_4"><span class="blind">Label</span></label>
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<th scope="row" class="border-right">Disabled</th>
-											<td>
-												<input type="checkbox" id="chk1_5" name="chk1_5" disabled />
-												<label for="chk1_5">Label</label>
-											</td>
-											<td>
-												<input type="checkbox" id="chk1_6" name="chk1_6" disabled />
-												<label for="chk1_6"><span class="blind">Label</span></label>
-											</td>
-											<td>
-												<input type="radio" id="radio1_5" name="radio1_5" disabled />
-												<label for="radio1_5">Label</label>
-											</td>
-											<td>
-												<input type="radio" id="radio1_6" name="radio1_6" disabled />
-												<label for="radio1_6"><span class="blind">Label</span></label>
-											</td>
-										</tr>
-										<tr>
-											<th scope="row" class="border-right">Disabled Selected</th>
-											<td>
-												<input type="checkbox" id="chk1_7" name="chk1_7" checked disabled />
-												<label for="chk1_7">Label</label>
-											</td>
-											<td>
-												<input type="checkbox" id="chk1_8" name="chk1_8" checked disabled />
-												<label for="chk1_8"><span class="blind">Label</span></label>
-											</td>
-											<td>
-												<input type="radio" id="radio1_7" name="radio1_7" checked disabled />
-												<label for="radio1_7">Label</label>
-											</td>
-											<td>
-												<input type="radio" id="radio1_8" name="radio1_8" checked disabled />
-												<label for="radio1_8"><span class="blind">Label</span></label>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</section>
-
-					<!-- drop down -->
-					<section class="section">
-						<div class="title-area">
-							<h3 class="h4">Drop down</h3>
-						</div>
-						<div class="dropdown size-sm">
-							<div class="dropdown-head">
-								<button class="dropdown-default"><span>선택</span></button>
-							</div>
-							<div class="dropdown-body">
-								<ul class="dropdown-list">
-									<li>
-										<a href="javascript:void(0);" role="button" class="dropdown-item selected"><span>선택항목1</span></a>
-									</li>
-									<li>
-										<a href="javascript:void(0);" role="button" class="dropdown-item"><span>선택항목2</span></a>
-									</li>
-									<li>
-										<a href="javascript:void(0);" role="button" class="dropdown-item"><span>선택항목3</span></a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</section>
-
-					<!-- select box -->
-					<section class="section">
-						<div class="title-area">
-							<h3 class="h4">Drop down</h3>
-						</div>
-					</section>
-
-					<!-- file upload -->
-					<section class="section">
-						<div class="title-area">
-							<h3 class="h4">file upload</h3>
-						</div>
-
-						<p><storng>등록(이미등록)</storng></p>
-						<div class="form-file">
-							<input type="file" accept="image/png, image/jpeg" id="inputfile01" />
-							<div class="input-file"></div>
-							<label for="inputfile01"><span>이미지등록</span></label>
-						</div>
-						<p class="file-text">사이즈 1840*690, 파일 확장자 png, jpg로 등록해 주세요.</p>
-					</section>
 				</div>
 				<!--end::cotents-->
 			</div>

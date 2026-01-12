@@ -151,8 +151,10 @@ header {
 .contents {
 	display: flex;
 	width: 100%;
-	height: calc(100% - rem(72));
 	overflow: hidden;
+	border-top: 1px solid #ccc;
+	width: 100%;
+	height: calc(100% - 7.2rem);
 
 	.side-menu {
 		text-align: left;
@@ -162,12 +164,13 @@ header {
 		height: 100%;
 		position: sticky;
 		overflow-y: auto;
+		border-right: 1px solid #ccc;
 
-		h3 {
-			font-size: rem(24);
-			font-weight: 700;
-			padding-left: rem(16);
-		}
+		// h3 {
+		// 	font-size: rem(24);
+		// 	font-weight: 700;
+		// 	padding-left: rem(16);
+		// }
 
 		> nav {
 			margin-top: rem(32);
@@ -252,19 +255,24 @@ header {
 }
 
 .contents-area {
-	background-color: #f4f5f6;
 	border-radius: rem(24);
 	flex-shrink: 0;
-	width: calc(100% - rem(240));
+	width: calc(100% - 24rem);
 	height: 100%;
-	overflow-x: scroll;
+	overflow-x: auto;
 
-	> .cont-box {
-		margin: rem(40);
-		padding: 0 rem(40) rem(40);
-		border-radius: rem(24);
-		background-color: $white;
-		min-width: rem(1520);
+	.contents-wrap {
+		padding: 4rem 10rem 10rem;
+		min-width: 16rem;
+		position: relative;
+
+		> .cont-box {
+			margin: rem(40);
+			padding: 0 rem(40) rem(40);
+			border-radius: rem(24);
+			background-color: $white;
+			min-width: rem(1520);
+		}
 	}
 }
 
@@ -277,6 +285,28 @@ header {
 	h4 {
 		font-size: rem(18);
 		font-weight: bold;
+	}
+}
+
+.section:not(:first-of-type) {
+	margin-top: rem(64);
+}
+
+.btn-area,
+.title-area,
+.table-top {
+	@include flexArea(auto, center, space-between, row, rem(8));
+	margin-bottom: rem(16);
+
+	.left-wrap {
+		@include flexArea(auto, center, flex-start, row, rem(12));
+	}
+	.right-wrap {
+		margin-left: auto;
+		@include flexArea(auto, center, flex-end, row, rem(8));
+	}
+
+	.top-wrap {
 	}
 }
 
