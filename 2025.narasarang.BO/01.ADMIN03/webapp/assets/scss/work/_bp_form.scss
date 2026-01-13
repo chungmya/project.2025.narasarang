@@ -271,19 +271,34 @@ input[type='radio'] {
 /*  calendar  */
 /*---------------------------------------------*/
 .datebox {
-	width: 5rem;
-	display: block;
 	position: relative;
-
 	input[type='text'],
 	input[type='number'] {
+		display: inline-block;
 		padding-right: 4.5rem;
+		width: 20rem;
 	}
 
 	> button {
-		border: 1px solid red;
+		width: 4rem;
+		height: 100%;
+		display: inline-block;
+		position: absolute;
+		top: 0;
+		right: 4rem;
+
 		&::before {
+			content: '';
 			background: #fff url($imgpath + 'common/icon_calendar_black.svg') no-repeat 100% 50%;
+			width: 2.4rem;
+			height: 2.4rem;
+			position: absolute;
+			top: 50%;
+			right: 1.6rem;
+			transform: translateY(-50%);
+		}
+		> em {
+			@include blind;
 		}
 	}
 }
@@ -292,6 +307,9 @@ input[type='radio'] {
 /*  drop down  */
 /*---------------------------------------------*/
 .dropdown {
+	+ .dropdown {
+		margin-top: 1rem;
+	}
 	//dropdown-head
 	&-head {
 		//@include flexArea($width: auto, $align: center, $justify: flex-start, $direction: row, $gap: 0);
@@ -322,24 +340,28 @@ input[type='radio'] {
 				transform: translateY(-50%) rotate(-180deg);
 			}
 		}
+		.dropdown-body {
+			display: block;
+		}
 	}
 
 	//dropdown-body
 	&-body {
 		//display: block;
 		display: none;
+		background-color: #fff;
 		box-shadow: 4px 4px 16px 0 rgba(18, 18, 18, 0.12);
 		padding: 0.4rem;
 		width: 100%;
 		position: absolute;
 		z-index: 10;
-		border: 1px solid red;
 	}
 	&-item {
 		padding: rem(8) rem(16);
 		color: #1e2124;
 		display: block;
 		border-radius: 0.8rem;
+		border-radius: rem(4);
 		word-break: break-word;
 
 		&:hover {
@@ -361,11 +383,17 @@ input[type='radio'] {
 				max-width: 14rem;
 			}
 		}
+		&-lg {
+			max-width: 32rem;
+			.dropdown-body {
+				max-width: 32rem;
+			}
+		}
 	}
 }
 
 //select됬을때
-.dropdown.select- {
+.dropdown.select-style {
 	.dropdown-head {
 		border: 1px solid #cdd1d5;
 		border-radius: rem(8);
@@ -391,33 +419,49 @@ input[type='radio'] {
 	}
 }
 
-// .dropdown-item {
-// 	&.selected {
-// 		position: relative;
-// 		padding-left: rem(24);
-// 		color: #256ef4;
-// 		background-color: #ecf2fe;
-// 		&:before {
-// 			content: '';
-// 			display: block;
-// 			position: absolute;
-// 			top: 50%;
-// 			left: 0;
-// 			width: rem(16);
-// 			height: rem(16);
-// 			transform: translateY(-50%);
-// 			background: url('../images/common/select_check.svg') top left / cover;
-// 		}
-// 	}
-// }
-
 /*---------------------------------------------*/
 /*  file upload  */
 /*---------------------------------------------*/
 .form-file {
-	@include flexArea($width: auto, $align: center, $justify: flex-start, $direction: row, $gap: 0);
+	@include flexArea($width: auto, $align: center, $justify: flex-start, $direction: row, $gap: 0.8rem);
+	width: 51rem;
 
+	input[type='file'] {
+		@include blind;
+	}
 	.input-file {
-		border: 1px solid;
+		border: 1px solid #b1b8be;
+		width: 100%;
+		height: 4rem;
+		border-radius: rem(8);
+		padding: rem(7) rem(45) rem(7) rem(15);
+		color: #1e2124;
+		@include ellipsis;
+	}
+	.btn-clear {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 4rem;
+		height: 4rem;
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 50%;
+			right: rem(16);
+			transform: translateY(-50%);
+			content: '';
+			width: rem(18);
+			height: rem(18);
+			background: url($imgpath + 'common/icon_input_clear.svg') no-repeat left top / cover;
+			border: none;
+		}
+		> em {
+			@include blind;
+		}
+		&:focus-visible {
+			outline: 1px solid #1e2124;
+		}
 	}
 }

@@ -220,3 +220,30 @@ $ScrollBgHover: #bbb;
 	box-sizing: border-box;
 	display: inline-block;
 }
+
+@mixin blind {
+	position: absolute;
+	display: inline-block;
+	font-size: 1px;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	visibility: hidden;
+	overflow: hidden;
+	border: 0;
+	clip: rect(0, 0, 0, 0);
+}
+
+@mixin ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+@mixin ellipsis-multi($line: 2) {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: $line;
+}

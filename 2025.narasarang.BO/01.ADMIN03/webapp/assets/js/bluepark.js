@@ -3,7 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	handleGnbMenu();
 	handleTabMenu();
 	handleSubTabMenu();
+	dropdown.init();
 });
+
 // document.addEventListener('DOMContentLoaded', function () {
 // 	UI.init();
 // });
@@ -142,24 +144,24 @@ const dropdown = {
 		defaultBtn: '.dropdown-default',
 		body: '.dropdown-body',
 		item: '.dropdown-item',
-		open: '.open',
+		open: 'open',
 		selected: 'selected',
 		selectStyle: 'select-style',
 	},
 	init() {
-		const dropdowns = document.querySelectorAll(this.classses.dropdown);
+		const dropdowns = document.querySelectorAll(this.classes.dropdown);
 		if (dropdowns.length > 0) {
 			this.handler();
 		}
 	},
 
 	handler() {
-		const dropdowns = document.querySelectorAll(this.classses.dropdown);
+		const dropdowns = document.querySelectorAll(this.classes.dropdown);
 
 		//드롭다운 클릭 이벤트 바인딩
 		dropdowns.forEach(dropdown => {
-			const defaultBtn = dropdown.querySelector(this.classses.defaultBtn);
-			const body = dropdown.querySelector(this.classses.body);
+			const defaultBtn = dropdown.querySelector(this.classes.defaultBtn);
+			const body = dropdown.querySelector(this.classes.body);
 
 			if (!defaultBtn || !body) {
 				return;
@@ -179,8 +181,8 @@ const dropdown = {
 
 		//영역 외 클릭시 드롭다운 닫기
 		document.addEventListener('click', e => {
-			if (!e.target.closet(this.classes.dropdown)) {
-				this.closeAll(dropdown);
+			if (!e.target.closest(this.classes.dropdown)) {
+				this.closeAll(dropdowns);
 			}
 		});
 	},
@@ -207,7 +209,7 @@ const dropdown = {
 	},
 	bindSelectEvents(dropdown) {
 		const items = dropdown.querySelectorAll(this.classes.item);
-		const defaultBtn = dropdown.querySelector(this.classes.btn);
+		const defaultBtn = dropdown.querySelector(this.classes.defaultBtn);
 
 		items.forEach(item => {
 			item.addEventListener('click', e => {
