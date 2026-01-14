@@ -1,0 +1,328 @@
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>나라사랑포털 | BO</title>
+		<script src="../../assets/js/ui.common.js"></script>
+		<link rel="stylesheet" href="../../assets/css/ui.common.css" type="text/css" />
+		<script src="../../assets/js/bluepark.js"></script>
+
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {});
+		</script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!--begin::Header-->
+			<script type="text/javascript" src="../_ui_include/gnb.js"></script>
+			<!--end::Header-->
+
+			<div class="contents">
+				<!--begin::aside-->
+				<script type="text/javascript" src="../_ui_include/aside.js"></script>
+				<!--end::Sidebar-->
+
+				<!--begin::cotents-->
+				<div class="contents-area">
+					<div class="contents-wrap">
+						<div class="cont-box">
+							<div class="heading">
+								<h2>Guide Form</h2>
+							</div>
+						</div>
+
+						<!-- Selection Controls -->
+						<section class="section">
+							<div class="title-area">
+								<h3 class="h3">Basic</h3>
+							</div>
+							<div class="table-area">
+								<div class="table-wrap">
+									<table class="table">
+										<caption>
+											scope가 col 타입일때의 마크업 된 테이블
+										</caption>
+										<colgroup>
+											<col width="120px" />
+											<col width="120px" />
+											<col width="160px" />
+											<col width="*" />
+											<col width="160px" />
+											<col width="160px" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">
+													<input type="checkbox" id="t1-1" name="t1-1" />
+													<label for="t1-1"><span class="blind">항목명</span></label>
+												</th>
+												<th scope="col">항목명</th>
+												<th scope="col">항목명</th>
+												<th scope="col">항목명</th>
+												<th scope="col">항목명</th>
+												<th scope="col">항목명</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<input type="checkbox" id="a1-1" name="a1-1" />
+													<label for="a1-1"><span class="blind">Label</span></label>
+												</td>
+												<td>항목값</td>
+												<td>항목값</td>
+												<td>항목값</td>
+												<td>항목값</td>
+												<td>항목값</td>
+											</tr>
+											<tr>
+												<td>
+													<input type="checkbox" id="a2-1" name="a1-2" />
+													<label for="a2-1"><span class="blind">Label</span></label>
+												</td>
+												<td>항목값</td>
+												<td>항목값</td>
+												<td>항목값</td>
+												<td>항목값</td>
+												<td>항목값</td>
+											</tr>
+											<tr>
+												<td>
+													<input type="checkbox" id="a3-1" name="a1-3" />
+													<label for="a3-1"><span class="blind">Label</span></label>
+												</td>
+												<td>항목값</td>
+												<td>항목값</td>
+												<td>항목값</td>
+												<td>항목값</td>
+												<td>항목값</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</section>
+
+						<section class="section">
+							<div class="title-area">
+								<h3 class="h3">.Rowstyle</h3>
+							</div>
+							<div class="table-area">
+								<div class="table-wrap">
+									<table class="table row-style">
+										<caption>
+											scope가 row 타입일때의 마크업 된 테이블
+										</caption>
+										<colgroup>
+											<col style="width: 280px" />
+											<col style="width: calc(100% - 120px)" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<th scope="row">
+													항목명<span class="essential"><em>필수</em></span>
+												</th>
+												<td>
+													<div class="form-input">항목값</div>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row">항목명</th>
+												<td>
+													<div class="form-textarea h-sm">
+														<textarea placeholder="내용 입력"></textarea>
+														<p class="txtcounter"><span>0</span> / 500</p>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</section>
+
+						<section class="section">
+							<div class="title-area">
+								<h3 class="h3">혼합형</h3>
+							</div>
+							<div class="table-area">
+								<div class="table-wrap">
+									<table class="table">
+										<caption>
+											scope가 col 타입일때의 마크업 된 테이블
+										</caption>
+										<colgroup>
+											<col width="120px" />
+											<col width="120px" />
+											<col width="160px" />
+											<col width="*" />
+											<col width="160px" />
+											<col width="160px" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">항목명</th>
+												<th scope="col">
+													<input type="checkbox" id="t1-1" name="t1-1" />
+													<label for="t1-1">항목명</label>
+												</th>
+												<th scope="col">항목명</th>
+												<th scope="col">항목명</th>
+												<th scope="col">항목명</th>
+												<th scope="col">항목명</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">항목값</th>
+												<td>
+													<input type="checkbox" id="a1-1" name="a1-1" />
+													<label for="a1-1"><span class="blind">Label</span></label>
+												</td>
+												<td>항목값</td>
+												<td>항목값</td>
+												<td>항목값</td>
+												<td>항목값</td>
+											</tr>
+											<tr>
+												<th scope="row">항목값</th>
+												<td>
+													<input type="checkbox" id="a2-1" name="a1-2" />
+													<label for="a2-1"><span class="blind">Label</span></label>
+												</td>
+												<td>항목값</td>
+												<td>항목값</td>
+												<td>항목값</td>
+												<td>항목값</td>
+											</tr>
+											<tr>
+												<th scope="row">항목값</th>
+												<td>
+													<input type="checkbox" id="a3-1" name="a1-3" />
+													<label for="a3-1"><span class="blind">Label</span></label>
+												</td>
+												<td>항목값</td>
+												<td>항목값</td>
+												<td>항목값</td>
+												<td>항목값</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</section>
+
+						<section class="section">
+							<div class="table-area">
+								<div class="table-wrap">
+									<table class="table">
+										<caption>
+											scope 타입이 colgroup일때의 테이블
+										</caption>
+										<colgroup>
+											<col width="120px" />
+											<col width="120px" />
+											<col width="160px" />
+											<col width="*" />
+											<col width="160px" />
+											<col width="160px" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col" rowspan="2">항목명</th>
+												<th scope="colgroup" colspan="5">항목명</th>
+											</tr>
+											<tr>
+												<th scope="col">
+													<input type="checkbox" id="t1-1" name="t1-1" />
+													<label for="t1-1"><span class="blind">항목명</span></label>
+												</th>
+												<th scope="col">항목명</th>
+												<th scope="col">항목명</th>
+												<th scope="col">항목명</th>
+												<th scope="col" class="last">항목명</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">항목값</th>
+												<td>
+													<input type="checkbox" id="a1-1" name="a1-1" />
+													<label for="a1-1"><span class="blind">Label</span></label>
+												</td>
+												<td>항목값</td>
+												<td>항목값</td>
+												<td>항목값</td>
+												<td>항목값</td>
+											</tr>
+											<tr>
+												<th scope="row">항목값</th>
+												<td>
+													<input type="checkbox" id="a2-1" name="a1-2" />
+													<label for="a2-1"><span class="blind">Label</span></label>
+												</td>
+												<td>항목값</td>
+												<td>항목값</td>
+												<td>항목값</td>
+												<td>항목값</td>
+											</tr>
+											<tr>
+												<th scope="row">항목값</th>
+												<td>
+													<input type="checkbox" id="a3-1" name="a1-3" />
+													<label for="a3-1"><span class="blind">Label</span></label>
+												</td>
+												<td>항목값</td>
+												<td>항목값</td>
+												<td>항목값</td>
+												<td>항목값</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</section>
+						<section class="section">
+							<div class="title-area">
+								<h3 class="h3">No Data</h3>
+							</div>
+							<div class="table-area">
+								<div class="table-wrap">
+									<table class="table">
+										<caption>
+											데이타가 없을때 마크업 된 테이블
+										</caption>
+										<colgroup>
+											<col width="120px" />
+											<col width="120px" />
+											<col width="160px" />
+											<col width="*" />
+											<col width="160px" />
+											<col width="160px" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">항목명</th>
+												<th scope="col">
+													<input type="checkbox" id="t1-1" name="t1-1" />
+													<label for="t1-1">항목명</label>
+												</th>
+												<th scope="col">항목명</th>
+												<th scope="col">항목명</th>
+												<th scope="col">항목명</th>
+												<th scope="col">항목명</th>
+											</tr>
+										</thead>
+									</table>
+									<div class="nodata">
+										<p class="nodata-info">조회된 데이터가 없습니다.</p>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+				<!--end::cotents-->
+			</div>
+		</div>
+	</body>
+</html>
